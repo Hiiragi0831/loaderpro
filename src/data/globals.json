@@ -1,0 +1,25 @@
+{
+    "header": {
+        "links": {
+            "logo": "/"
+        },
+        "email": "hello@davedev.ru",
+        "menu": [
+            {
+                "url": "https://github.com/ninelines-team/ninelines-docs",
+                "name": "Документация"
+            },
+            {
+                "url": "https://github.com/ninelines-team/ninelines-template",
+                "name": "Страница проекта"
+            }
+        ]
+    },
+    "footer": {
+        "copyright": "Девять линий"
+    },
+    "intro": {
+        "title": "Это стартовый шаблон для верстки!",
+        "text": "<br><br>Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)<br> <br><b>Не забывай читать <a href='https://github.com/ninelines-team/ninelines-docs' target='_blank'>документацию</a>!</b>"
+    }
+}

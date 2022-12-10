@@ -1,0 +1,14 @@
+header.header
+    .header__container.container
+        a.header__logo(href=globals.header)
+            +svg('logo-ru')
+
+        button.header__burger.btn.js-burger(type='button')
+            span
+            span
+
+        nav.header__menu
+            .header__list
+                for object in globals.header.menu
+                    a.header__link(href=object.url target="_blank")!= object.name
+                a.header__link(href='mailto:${globals.header.email}')!= globals.header.email

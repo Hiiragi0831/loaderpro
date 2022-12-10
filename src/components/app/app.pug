@@ -1,0 +1,115 @@
+.app
+    .container
+
+        h1 Мини гайд по использованию проекта
+
+        h3 Эти данные зашины внутри файла config/loaders/pug
+        pre #[code metatags.title]: !{metatags.title}
+        pre #[code isDev]: !{isDev}
+        pre #[code prefix]: !{prefix}
+        pre #[code publicPath]: !{publicPath}
+
+
+        br
+        hr
+        h3 Это пример работы pug-шаблона внутри js-кода
+        p Появилась возможность отрисовки данных из pug-шаблона через js-код, для примера посмотрите на мобильном и десктоп устройстве
+        p Так же внуть шаблона можно передавать объект с данными который можно изменять внутри js
+        br
+        .app-js
+
+        br
+        hr
+        h3 Пример работы с картинками и медиа-файлами
+        p На данный момент появилась возможность работать с имортом файла из папки, при этом ему присваивается своё уникальное имя содержащее контент хеш, подробности в файле config/loaders/images, а также работает старый способ через указание обычного пути до файла
+        br
+
+        - var image = "./image.jpeg";
+        - var image2 = require('@images/today.jpg');
+
+        // можно кинуть прямо сюда путь переменная чисто для теста
+        .app-field
+            figure.app-image
+                img(src=image)
+                figcaption Картинка подтянутая из обычной переменной
+            figure.app-image
+                img(src=image2)
+                figcaption Картинка подтянутая из переменной с использованием импорта
+            figure.app-image
+                img(src=require('@images/today.jpg'))
+                figcaption Картинка подтянутая из папки assets/images с использованием импорта
+        .app-field
+            figure.app-image
+                img(src=`${require('./today.jpg')}`)
+                figcaption Картинка подтянутая из папки components/app с использованием импорта и шаблонных строк
+            figure.app-image
+                img(src=require('@components/header/images/image.jpeg'))
+                figcaption Картинка подтянутая из папки components/header с использованием импорта
+            figure.app-image
+                img(src=`${baseDir}assets/images/app/night.jpg`)
+                figcaption Картинка подтянутая прописанная обычным src из папки с компонентами
+        .app-field
+            figure.app-image
+                img(src='./image.jpeg')
+                figcaption Картинка подтянутая прописанная обычным src
+            +lazyImage({
+                src: `${baseDir}image.jpeg`,
+                alt: '',
+                appear: false,
+            })
+
+        br
+        hr
+        h3 Пример работы с svg-спрайтами
+        p Появилась возможность использовать svg-спрайты внутри scss, также можно переопределять их цвет через указание дополнительных свойств при импорте спрайта, #[a(href="https://github.com/cascornelissen/svg-spritemap-webpack-plugin/blob/master/docs/variables.md" target="_blank") подробнее], а также работает старый способ через указание имени файла при использовании миксина svg внутри pug
+
+        .app-field
+            figure.app-image
+                +svg('logo-ru')
+                figcaption обычное использование svg иконки внутри pug`а
+            figure.app-image
+                .app-icon2
+                figcaption svg иконка импортированная внутрь scss без лишних данных
+        .app-field
+            figure.app-image
+                .app-icon3
+                figcaption svg иконка импортированная внутрь scss + без изменения цвета, но с заданными исходными размерами
+        .app-field
+            figure.app-image
+                .app-icon
+                figcaption svg иконка импортированная внутрь scss + переопределен цвет + с заданными исходными размерами
+
+        br
+        hr
+        h3 Пример работы с json внутри pug
+        p Появилась возможность работать с json-данными сразу внутри pug, для этого необходимо импортировать данные, а дальше обращаться к ним через обычный синтаксис, использовать each и прочее
+
+        - var colors = require('@components/app/colors.json')
+
+        .app-field.colors
+            each color in colors
+                .app-color(style=`background-color:${color.hex};`)= color.name
+
+        br
+        -
+            var datas = [
+                {
+                    name: 'Red Green Blue',
+                    colors: require('@components/app/colors.json')
+                },
+                {
+                    name: 'Rose Violet Azure',
+                    colors: require('@components/app/colors2.json')
+                }
+            ]
+
+        +b.second
+            +e.H3 Так же json-данные можно добавлять прямо внутрь созданных объектов и миксовать их
+            +e.H3 А ещё BEMTO прямо из коробки
+
+            each item in datas
+                +e.H3.h3 !{item.name} &nbsp;
+                each color in item.colors
+                    +e.I.i #{color.name} &nbsp;
+
+        hr
