@@ -1,0 +1,40 @@
+.box-link {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: vc(10);
+    padding: vc(25);
+    width: 100%;
+    height: vc(300);
+    background-color: rgba($color-gray2, 0.7);
+    transition: background-color $transition;
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        color: $color-white;
+        transition: color $transition;
+    }
+
+    &:hover {
+        background-color: rgba($color-gray2, 0.9);
+
+        .box-link__title {
+            color: $color-orange;
+        }
+    }
+}

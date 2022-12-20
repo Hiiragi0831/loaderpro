@@ -4,7 +4,7 @@
 $color-black: #000;
 $color-white: #fff;
 $color-gray: #1f1f1f;
-$color-gray2: #2c2c2c;
+$color-gray2: #303030;
 $color-light: #b7b7b7;
 $color-orange: #f8991d;
 
@@ -13,11 +13,14 @@ $color-orange: #f8991d;
 $font-primary: "Gilroy", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
 // EASING TRANSITIONS
-$duration-normal: 0.4s;
+$duration-normal: 0.3s;
 $easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
 $easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+$easeInOutQuart: cubic-bezier(0.76, 0, 0.24, 1); // https://easings.net/ru#easeInOutQuart
 $easing-out: ease-out;
 $easing-in: ease-in;
+
+$transition: $duration-normal $easeInOutQuart;
 
 // Settings
 $desktop: 1025;

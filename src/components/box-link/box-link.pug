@@ -1,0 +1,10 @@
+mixin box-link
+    a(href="#").box-link
+        .box-link__img
+            +lazyImage({
+                src: `${baseDir}assets/images/box-link/box.png`,
+                alt: '',
+                appear: false,
+            })
+        .box-link__title.h3.text-3xl.font-bold.underline
+            span lorem
