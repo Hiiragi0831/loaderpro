@@ -3,13 +3,14 @@
 // COLORS
 $color-black: #000;
 $color-white: #fff;
-$color-gray: #171717;
+$color-gray: #1f1f1f;
 $color-gray2: #2c2c2c;
 $color-light: #b7b7b7;
+$color-orange: #f8991d;
 
 // FONTS
 // stylelint-disable-next-line
-$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-primary: "Gilroy", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
 // EASING TRANSITIONS
 $duration-normal: 0.4s;

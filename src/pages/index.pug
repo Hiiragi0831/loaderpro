@@ -2,12 +2,26 @@ extends @pug/base
 
 prepend vars
     //-
+    - title = 'Техника для склада купить в Санкт-Петербурге цена складской техники'
+    - description = 'Техника для склада в Санкт-Петербурге цена складской техники на сайте компании «СПЕЦМАШИНА». Продажа и обслуживание вилочных погрузчиков и складтехники.'
+    - image = '/images/share/share.jpg' // url картинки для шера
 
 append vars
-    //-
+    - link.appleTouchIcon180x180 = 'favicon/apple-touch-icon.png'
+    - link.icon32x32 = 'favicon/favicon-32x32.png'
+    - link.icon16x16 = 'favicon/favicon-16x16.png'
+    - link.manifest = 'favicon/site.webmanifest'
+    - link.maskIcon.href = 'favicon/safari-pinned-tab.svg'
+    - link.maskIcon.color = '#5bbad5'
+    - meta.msapplicationTileColor = '#da532c'
+    - meta.msapplicationTileImage = 'favicon/mstile-144x144.png'
+    - meta.themeColor = '#ffffff'
 
 block content
     .site
         include @components/header/header
-        include @components/app/app
-        //- include @components/test/test
+        main
+            .container
+                include @components/buttons/buttons
+                include @components/typography/typography
+        include @components/footer/footer

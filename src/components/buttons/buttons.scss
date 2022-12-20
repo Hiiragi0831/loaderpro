@@ -1,0 +1,18 @@
+.button {
+    border-radius: vc(90);
+    padding: vc(16) vc(40);
+    font-weight: 600;
+    font-size: vc(15);
+    line-height: vc(18);
+    display: inline-flex;
+
+    &__primary {
+        color: $color-white;
+        background-color: $color-orange;
+
+        &-outline {
+            border: 1px solid $color-orange;
+            color: $color-orange;
+        }
+    }
+}

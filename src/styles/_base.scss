@@ -1,16 +1,16 @@
 :root {
-	--width-base: #{$laptop};
-	--width-current: #{$laptop} * 1px;
-	--width-multiplier: var(--width-current) / var(--width-base);
+    --width-base: #{$laptop};
+    --width-current: #{$laptop} * 1px;
+    --width-multiplier: var(--width-current) / var(--width-base);
 
-	@include laptop {
-		--width-current: 100vw;
-	}
+    @include laptop {
+        --width-current: 100vw;
+    }
 
-	@include devices {
-		--width-base: #{$mobile};
-		--width-current: 100vmin;
-	}
+    @include devices {
+        --width-base: #{$mobile};
+        --width-current: 100vmin;
+    }
 }
 
 *,
@@ -49,6 +49,7 @@ body {
 
 main {
     flex: 1;
+    padding-top: vc(92);
 }
 
 p {
@@ -121,40 +122,14 @@ iframe {
     display: block;
 }
 
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    text-align: center;
-    background-color: transparent;
-    transition: $duration-normal;
-    user-select: none;
-
-    &__content {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 100%;
-        color: currentColor;
-        transform: translateZ(0);
-    }
-}
-
-.js-lazy-load:not(.is-loaded) {
-    max-height: 50vh;
-}
-
 .container {
     position: relative;
     z-index: 1;
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
-    max-width: vc(1160);
+    // stylelint-disable-next-line
+    max-width: vc(1200);
 }
 
 .site {
