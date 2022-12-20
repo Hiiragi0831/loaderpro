@@ -7,6 +7,6 @@ import { ProvidePlugin } from 'webpack';
  * @see https://webpack.js.org/plugins/provide-plugin/
  */
 export const Provide = new ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
+    // $: 'jquery',
+    // jQuery: 'jquery',
 });
