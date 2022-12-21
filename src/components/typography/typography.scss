@@ -17,6 +17,7 @@
 }
 
 p {
+    margin-bottom: vc(20);
     font-weight: 400;
     font-size: vc(16);
     line-height: vc(24);
@@ -27,4 +28,35 @@ small {
     font-size: vc(16);
     line-height: vc(18);
     opacity: 0.5;
+}
+
+ul {
+    margin-bottom: vc(20);
+
+    li {
+        position: relative;
+        margin-bottom: vc(16);
+        padding-left: vc(12);
+        font-size: vc(16);
+        line-height: vc(24);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: vc(9);
+            overflow: hidden;
+            border-radius: 100%;
+            width: vc(6);
+            height: vc(6);
+            background-color: $color-orange;
+        }
+    }
+}
+
+p,
+ul {
+    &:last-child {
+        margin: 0;
+    }
 }

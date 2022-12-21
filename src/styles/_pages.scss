@@ -1,0 +1,28 @@
+.demo-container {
+    display: flex;
+    flex-direction: column;
+    gap: vc(15);
+}
+
+.services {
+    &__row {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        gap: vc(15);
+
+        @include devices {
+            grid-template: 1fr / 1fr;
+        }
+    }
+}
+
+.half {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    gap: vc(100);
+
+    @include devices {
+        grid-template: 1fr / 1fr;
+        gap: vc(15);
+    }
+}

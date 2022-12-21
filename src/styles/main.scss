@@ -1,9 +1,4 @@
 // stylelint-disable at-rule-empty-line-before
-
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
 // не трогать этот импорт, он нужен для работы svg-спрайтов
 @import './sprites';
 
@@ -13,8 +8,11 @@
 @import "fonts";
 @import "base";
 @import "helpers";
+@import "pages";
 
 @import "@components/header/header";
 @import "@components/buttons/buttons";
 @import "@components/typography/typography";
 @import "@components/box-link/box-link";
+@import "@components/sentence/sentence";
+@import "@components/brand/brand";

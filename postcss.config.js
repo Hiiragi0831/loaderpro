@@ -3,7 +3,7 @@ module.exports = {
     syntax: 'postcss-scss',
     "plugins": {
         // "postcss-import": {},
-        "tailwindcss": {},
+        // "tailwindcss": {},
         "postcss-preset-env": {
             "stage": 1,
             "features": {

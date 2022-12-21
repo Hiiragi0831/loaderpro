@@ -37,4 +37,8 @@
             color: $color-orange;
         }
     }
+
+    @include devices {
+        height: vc(200);
+    }
 }

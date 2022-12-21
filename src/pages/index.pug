@@ -21,13 +21,26 @@ block content
     .site
         include @components/header/header
         main
-            .container
+            .container.demo-container
                 include @components/buttons/buttons
                 include @components/typography/typography
-                +box-link
-                +box-link
-                +box-link
-                +box-link
-                +box-link
-                +box-link
+                .services__row
+                    +box-link
+                    +box-link
+                    +box-link
+                    +box-link
+                    +box-link
+                    +box-link
+                include @components/sentence/sentence
+                .half
+                    .text
+                        p.h1 Запчасти, шины и тяговые АКБ для погрузчиков!
+                        p Во время эксплуатации погрузчиков и прочего оборудования необходимо регулярно проводить техническое обслуживание. Зачастую ремонт погрузчиков требует новых запчастей на замену старым. В данной ситуации покупка подходящих деталей выбор не из простых, нужно найти проверенного продавца.
+                        p Компания «СПЕЦМАШИНА» предлагает запчасти для вилочных погрузчиков от лучших мировых поставщиков. У нас Вы найдете – высокое качество, квалифицированный подход специалистов и быстрый заказ всех необходимых изделий.
+                    +lazyImage({
+                        src: `${baseDir}assets/images/box-link/box.png`,
+                        alt: '',
+                        appear: false,
+                    }).image
+
         include @components/footer/footer

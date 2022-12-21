@@ -1,0 +1,9 @@
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: vc(10);
+    padding: vc(10);
+    box-shadow: 0 vc(4) vc(13) rgba($color-black, 0.15);
+    background: $color-white;
+}

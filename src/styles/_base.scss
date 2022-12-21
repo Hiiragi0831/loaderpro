@@ -52,7 +52,10 @@ main {
     padding-top: vc(92);
 }
 
-p {
+p,
+h1,
+h2,
+h3 {
     margin: 0;
 }
 
@@ -130,6 +133,10 @@ iframe {
     max-width: 100%;
     // stylelint-disable-next-line
     max-width: vc(1200);
+
+    @include devices {
+        padding: 0 vc(15);
+    }
 }
 
 .site {
@@ -138,6 +145,11 @@ iframe {
     min-height: 100vh; // fallback
     // stylelint-disable-next-line
     min-height: var(--vh);
+}
+
+.image {
+    border-radius: vc(10);
+    width: 100%;
 }
 
 /* stylelint-disable */
