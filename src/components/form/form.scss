@@ -1,0 +1,10 @@
+.form {
+    &__input {
+        outline: none;
+        border: none;
+        border-radius: vc(90);
+        padding: vc(16) vc(30);
+        font-weight: 400;
+        font-size: vc(14);
+    }
+}

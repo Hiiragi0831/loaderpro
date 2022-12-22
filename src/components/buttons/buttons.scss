@@ -1,10 +1,15 @@
 .button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
     border-radius: vc(90);
     padding: vc(16) vc(40);
     font-weight: 600;
     font-size: vc(15);
     line-height: vc(18);
-    display: inline-flex;
+    text-align: center;
 
     &__primary {
         color: $color-white;
@@ -13,6 +18,16 @@
         &-outline {
             border: 1px solid $color-orange;
             color: $color-orange;
+
+            &:hover {
+                border: 1px solid $color-black;
+                color: $color-white;
+                background-color: $color-black;
+            }
+        }
+
+        &:hover {
+            background-color: $color-black;
         }
     }
 }

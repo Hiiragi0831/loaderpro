@@ -5,6 +5,8 @@ import '@styles/main.scss';
 
 import {vhFix} from '@scripts/vendor/vh-fix';
 import lazyLoading from '@scripts/modules/lazyLoading';
+import {slider} from "../components/slider/slider";
 
 vhFix();
 lazyLoading.init();
+slider();

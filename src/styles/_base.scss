@@ -2,6 +2,8 @@
     --width-base: #{$laptop};
     --width-current: #{$laptop} * 1px;
     --width-multiplier: var(--width-current) / var(--width-base);
+    --swiper-pagination-color: #f8991d;
+    --swiper-theme-color: #f8991d;
 
     @include laptop {
         --width-current: 100vw;

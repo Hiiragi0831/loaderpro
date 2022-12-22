@@ -1,0 +1,35 @@
+.slider {
+    display: flex;
+    padding-bottom: vc(30);
+
+    .swiper {
+        width: 100%;
+
+        &-slide {
+            padding: vc(13);
+            box-sizing: border-box;
+        }
+
+        &-pagination-bullet {
+            width: vc(15);
+            height: vc(15);
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: vc(10);
+        padding: vc(30);
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 vc(4) vc(13) rgba($color-black, 0.15);
+        background: $color-white;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

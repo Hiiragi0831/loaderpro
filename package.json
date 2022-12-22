@@ -96,7 +96,8 @@
         "normalize.css": "8.0.1",
         "object-fit-images": "3.2.4",
         "object-fit-videos": "1.0.4",
-        "scroll-depth": "1.2.0"
+        "scroll-depth": "1.2.0",
+        "swiper": "8.4.5"
     },
     "husky": {
         "hooks": {

@@ -1,0 +1,15 @@
+.request
+    .request__bg
+        +lazyImage({
+            src: `${baseDir}assets/images/request/img.jpg`,
+            alt: '',
+            appear: false,
+        })
+    .container
+        .request__row
+            p.h1 Возникли проблемы с выбором ?
+            p.lead Закажите бесплатную консультацию
+            form.form
+                input(type="text" placeholder="lorem").form__input
+                input(type="text" placeholder="lorem").form__input
+                button.button.button__primary Заказать звонок
