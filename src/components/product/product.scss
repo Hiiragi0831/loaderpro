@@ -41,7 +41,7 @@
         text-align: center;
         text-decoration: none;
         color: $color-black;
-        transition: $transition-color;
+        transition: color $transition;
 
         &:hover {
             color: $color-orange;
