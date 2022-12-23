@@ -1,0 +1,17 @@
+mixin product
+    .product&attributes(attributes)
+        a.product__image(href="#")
+            +lazyImage({
+                src: `${baseDir}assets/images/product/product-01.png`,
+                alt: '',
+                appear: false,
+            })
+        .product__sklad
+            .product__statys.product__statys--green
+                span В наличии
+        a.product__title(href="#")
+            p Шина пневматическая 13.6-38 8PR BKT TR 135 131A6/127A8 TT
+        .product__price
+            p 2 500 ₽
+        .product__button
+            a.button.button__primary-outline(href="#") Подробнее

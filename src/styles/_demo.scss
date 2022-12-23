@@ -1,0 +1,32 @@
+.demo {
+    &__row {
+        display: flex;
+        flex-direction: column;
+        padding: vc(30) 0;
+        gap: vc(30);
+    }
+
+    &__col {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr 1fr;
+        padding: vc(30) 0;
+        gap: vc(30);
+
+        @include devices {
+            grid-template: 1fr / 1fr;
+        }
+    }
+
+    &__half {
+        display: flex;
+        flex-direction: column;
+        padding: vc(30) 0;
+        width: 70%;
+        gap: vc(30);
+
+        @include devices {
+            width: 100%;
+        }
+    }
+
+}

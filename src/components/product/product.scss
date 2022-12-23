@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: $border-radius;
-    padding: 25px;
+    padding: vc(25);
     height: 100%;
     box-shadow: $box-shadow;
 
@@ -17,10 +17,10 @@
     &__image {
         display: flex;
         justify-content: center;
-        margin-bottom: 22px;
+        margin-bottom: vc(22);
         width: 100%;
         height: 100%;
-        max-height: 150px;
+        max-height: vc(150);
         opacity: 1;
         transition: opacity $transition;
 
@@ -33,11 +33,42 @@
         }
     }
 
+    &__statys {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: block;
+            flex-shrink: 0;
+            margin-right: vc(8);
+            border-radius: 100%;
+            width: vc(8);
+            height: vc(8);
+            box-shadow: 0 0 0 vc(4) rgba($color-green, 0.2);
+            background-color: $color-green;
+        }
+
+        &--green {
+            &::before {
+                box-shadow: 0 0 0 vc(4) rgba($color-green, 0.2);
+                background-color: $color-green;
+            }
+        }
+
+        &--red {
+            &::before {
+                box-shadow: 0 0 0 vc(4) rgba($color-orange-dark, 0.2);
+                background-color: $color-orange-dark;
+            }
+        }
+    }
+
     &__title {
-        margin-bottom: 15px;
+        margin-bottom: vc(15);
         font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: vc(16);
+        line-height: vc(19);
         text-align: center;
         text-decoration: none;
         color: $color-black;
@@ -50,39 +81,33 @@
 
     &__price {
         margin-top: auto;
-        margin-bottom: 15px;
+        margin-bottom: vc(15);
         text-align: center;
 
         p {
             font-weight: 600;
-            font-size: 24px;
-            line-height: 29px;
+            font-size: vc(24);
+            line-height: vc(29);
         }
     }
 
-    &__button {}
-
     &__sklad {
+        position: absolute;
+        left: vc(20);
+        top: vc(20);
         display: flex;
         justify-content: center;
-        width: 66px;
+        width: vc(77);
 
-        .product__statys {
-            span {
-                margin-left: 8px;
-                font-size: 10px;
-            }
-
+        #{$p}__statys {
             &::before {
                 margin: 0;
             }
-        }
 
-        @include mobile {
-            position: absolute;
-            left: 15px;
-            top: 15px;
-            width: auto;
+            span {
+                margin-left: vc(8);
+                font-size: vc(12);
+            }
         }
     }
 
@@ -90,11 +115,34 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid $color-gray;
+        border-bottom: vc(1) solid $color-gray;
         border-radius: 0;
-        padding: 15px;
+        padding: vc(15);
         height: auto;
         box-shadow: none;
+
+        #{$p}__sklad {
+            position: relative;
+            left: auto;
+            top: auto;
+
+            #{$p}__statys {
+                span {
+                    display: none;
+
+                    @include devices {
+                        display: block;
+                    }
+                }
+            }
+
+            @include devices {
+                position: absolute;
+                left: vc(15);
+                top: vc(15);
+                width: auto;
+            }
+        }
 
         #{$p}__title,
         #{$p}__price,
@@ -104,40 +152,40 @@
         }
 
         #{$p}__image {
-            width: 60px;
-            height: 60px;
+            width: vc(60);
+            height: vc(60);
         }
 
         #{$p}__price {
             flex-shrink: 0;
-            width: 135px;
+            width: vc(135);
             text-align: center;
 
             p {
                 font-weight: 500;
-                font-size: 18px;
-                line-height: 21px;
+                font-size: vc(18);
+                line-height: vc(21);
             }
         }
 
         #{$p}__title {
-            width: 263px;
+            width: vc(263);
             font-weight: 400;
             text-align: left;
         }
 
         #{$p}__button {
-            width: 176px;
+            width: vc(176);
 
             .btn {
                 width: 100%;
             }
         }
 
-        @include mobile {
+        @include devices {
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: vc(15);
 
             #{$p}__title {
                 text-align: center;
