@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: vc(10);
+    border-radius: $border-radius;
     padding: vc(10);
-    box-shadow: 0 vc(4) vc(13) rgba($color-black, 0.15);
+    box-shadow: $box-shadow;
     background: $color-white;
 }

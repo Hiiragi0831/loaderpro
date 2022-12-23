@@ -1,0 +1,14 @@
+.social
+    .social__bg
+        +lazyImage({
+            src: `${baseDir}assets/images/social/bg.jpg`,
+            alt: '',
+            appear: false,
+        })
+    .social__logo
+        +svg('logo-vk')
+    .container
+        .social__row
+            p.h1 Следите за нами ВКонтакте
+            p Подпишись на нас в ВК и будь в курсе последних новостей компании
+            a(href="#").button.button__primary Перейти
