@@ -1,0 +1,48 @@
+.contact-box {
+    p {
+        margin: 0;
+        padding-left: vc(22);
+        font-weight: 400;
+        font-size: vc(13);
+        line-height: vc(15);
+    }
+
+    a {
+        &:hover {
+            color: $color-orange;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        color: $color-black;
+        gap: vc(10);
+    }
+
+    &__icon {
+        margin-top: vc(4);
+        width: vc(12);
+        height: vc(12);
+        fill: $color-orange;
+    }
+
+    &__title {
+        display: flex;
+        font-weight: 500;
+        font-size: vc(16);
+        line-height: vc(19);
+        text-decoration: none;
+        transition: color $transition;
+        gap: vc(10);
+    }
+
+    &__write {
+        padding-left: vc(22);
+
+        &:hover {
+            color: $color-orange;
+        }
+    }
+}

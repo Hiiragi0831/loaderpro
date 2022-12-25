@@ -11,14 +11,18 @@
 @import "pages";
 @import "demo";
 
-@import "@components/header/header";
+@import "@components/logo/logo";
 @import "@components/buttons/buttons";
 @import "@components/typography/typography";
+@import "@components/contact-box/contact-box";
+@import "@components/header/header";
+@import "@components/footer/footer";
+@import "@components/social/social";
 @import "@components/box-link/box-link";
 @import "@components/sentence/sentence";
 @import "@components/brand/brand";
 @import "@components/request/request";
 @import "@components/form/form";
 @import "@components/slider/slider";
-@import "@components/social/social";
 @import "@components/product/product";
+@import "@components/intro/intro";

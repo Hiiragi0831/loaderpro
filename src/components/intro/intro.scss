@@ -1,0 +1,113 @@
+.intro {
+    $p: &;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: vc(50) 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    color: $color-white;
+
+    h1,
+    p {
+        margin: 0;
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #0c0c0c 0%, rgba(12, 12, 12, 0.79) 70.62%, rgba(12, 12, 12, 0.32) 87.81%, rgba(57, 57, 57, 0.25) 100%);
+        }
+
+        img {
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: vc(200);
+
+        @include devices {
+            flex-direction: column;
+            gap: vc(30);
+        }
+    }
+
+    &__info {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: vc(30);
+
+        &.center {
+            text-align: center;
+
+            #{$p}__btn {
+                justify-content: center;
+            }
+        }
+
+        @include devices {
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        gap: vc(30);
+
+        @include devices {
+            flex-direction: column;
+        }
+    }
+
+    &__form {
+        border: vc(1) solid $color-gray4;
+        border-radius: $border-radius;
+        padding: vc(65) vc(60);
+        width: 100%;
+        max-width: vc(380);
+        box-shadow: $box-shadow;
+        background: $color-gray;
+
+        p {
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            margin-top: vc(30);
+            gap: vc(18);
+
+            &__input {
+                border: vc(1) solid rgba($color-white, 0.3);
+                width: 100%;
+                color: $color-white;
+                background-color: transparent;
+            }
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+}

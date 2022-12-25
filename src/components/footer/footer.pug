@@ -1,3 +1,32 @@
-footer
+footer.footer
     .container
-        span footer is here
+        .footer__row
+            a(href="#").logo
+                +svg('logo')
+                | Спецмашина
+            .contact-box.contact-box__item
+                a(href="mailto:zakaz@cartrac.ru").contact-box__title
+                    +svg('icon-email').contact-box__icon
+                    | zakaz@cartrac.ru
+                a(href="mailto:zakaz@cartrac.ru").link.contact-box__write Написать нам
+            .contact-box.contact-box__item
+                a(href="tel:+78003501460").contact-box__title
+                    +svg('icon-pnone').contact-box__icon
+                    | +7 (800) 350-14-60
+                p c 10.00 до 22.00
+            .footer__social
+                p Социальные сети
+                .footer__social__box
+                    a(href="#")
+                        +svg("icon-vk")
+                    a(href="#")
+                        +svg("icon-telegram")
+                    a(href="#")
+                        +svg("icon-whatsapp")
+            .contact-box.contact-box__item
+                .contact-box__title
+                    +svg('pin').contact-box__icon
+                    | 196240, Санкт-Петербург, Кубинская улица, 80Б
+    .footer__bottom
+        .container
+            p Все права защищены. 2022

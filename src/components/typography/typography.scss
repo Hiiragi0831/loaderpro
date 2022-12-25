@@ -2,18 +2,33 @@
     font-weight: 700;
     font-size: vc(40);
     line-height: vc(48);
+
+    @include devices {
+        font-size: vc(30);
+        line-height: vc(36);
+    }
 }
 
 .h2 {
     font-weight: 700;
     font-size: vc(30);
     line-height: vc(36);
+
+    @include devices {
+        font-size: vc(24);
+        line-height: vc(28);
+    }
 }
 
 .h3 {
     font-weight: 600;
     font-size: vc(24);
     line-height: vc(28);
+
+    @include devices {
+        font-size: vc(16);
+        line-height: vc(24);
+    }
 }
 
 p {

@@ -192,4 +192,14 @@
             }
         }
     }
+
+    &__card {
+        #{$p}__title {
+            p {
+                font-weight: 600;
+                font-size: vc(20);
+                line-height: vc(24);
+            }
+        }
+    }
 }

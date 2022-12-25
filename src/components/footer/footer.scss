@@ -1,17 +1,63 @@
 .footer {
-    display: flex;
     margin-top: auto;
-    padding: vc(20) vc(30);
     width: 100%;
+    color: $color-white;
+    background: $color-gray3;
 
-    &__developer {
-        margin-left: auto;
-        font-size: vc(12);
-        line-height: vc(16);
+    &__row {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
+        padding: vc(40) 0;
+        gap: vc(40);
+
+        @include devices {
+            grid-template: 1fr / 1fr;
+        }
     }
 
-    &__copy {
-        font-size: vc(12);
-        line-height: vc(16);
+    .contact-box__item {
+        color: $color-white;
+    }
+
+    &__social {
+        color: $color-white;
+
+        p {
+            margin-bottom: vc(10);
+            font-weight: 400;
+            font-size: vc(13);
+            line-height: vc(15);
+        }
+
+        a {
+            width: vc(24);
+            height: vc(24);
+
+            svg {
+                fill: $color-orange;
+                transition: fill $transition;
+            }
+
+            &:hover {
+                svg {
+                    fill: $color-white;
+                }
+            }
+        }
+
+        &__box {
+            display: flex;
+            gap: vc(17);
+        }
+    }
+
+    &__bottom {
+        padding: vc(15) 0;
+        text-align: center;
+        background: $color-gray4;
+
+        p {
+            opacity: 0.8;
+        }
     }
 }

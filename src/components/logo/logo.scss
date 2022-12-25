@@ -1,0 +1,16 @@
+.logo {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    font-weight: 700;
+    font-size: vc(20);
+    text-transform: uppercase;
+    transition: $duration-normal;
+    gap: vc(10);
+
+    svg {
+        width: vc(50);
+        height: vc(52);
+        fill: $color-white;
+    }
+}

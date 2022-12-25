@@ -1,0 +1,34 @@
+.intro
+    .intro__bg
+        +lazyImage({
+            src: `${baseDir}assets/images/intro/bg.jpg`,
+            alt: '',
+            appear: false,
+        })
+    .container
+        .intro__info.center
+            h1.h1 Запчасти для вилочных погрузчиков
+            p.h3 Лучший сервис в&nbsp;России. Более 37&nbsp;000&nbsp;000 позиций в&nbsp;наличии и&nbsp;под заказ. Экспресс-доставка за&nbsp;24&nbsp;часа.
+            .intro__btn
+                a.button.button__primary-outline Запрос по каталожным номерам
+                a.button.button__primary-outline Запрос по данным техники
+                a.button.button__primary-outline Перейти в каталог
+.intro
+    .intro__bg
+        +lazyImage({
+            src: `${baseDir}assets/images/intro/bg.jpg`,
+            alt: '',
+            appear: false,
+        })
+    .container
+        .intro__info
+            h1.h1 Автопогрузчики и складская техника
+            p.h3 Гарантия 5 лет. 350 единиц техники в наличии. Лучшие цены в России. От официального дилера.
+            .intro__btn
+                a.button.button__primary-outline Перейти в каталог
+        .intro__form
+            p.h1 Заказать консультацию
+            form.form
+                input.form__input(type="text" placeholder="Ваше имя")
+                input.form__input(type="text" placeholder="Номер телефона")
+                button.button.button__primary-outline(type="submit") Оставить заявку

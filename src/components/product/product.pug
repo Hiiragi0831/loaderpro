@@ -15,3 +15,15 @@ mixin product
             p 2 500 ₽
         .product__button
             a.button.button__primary-outline(href="#") Подробнее
+mixin productTwo
+    .product&attributes(attributes)
+        a.product__image(href="#")
+            +lazyImage({
+                src: `${baseDir}assets/images/product/product-02.png`,
+                alt: '',
+                appear: false,
+            })
+        a.product__title(href="#")
+            p Дизельный погрузчик
+        .product__button
+            a.button.button__primary-outline(href="#") Перейти в каталог
