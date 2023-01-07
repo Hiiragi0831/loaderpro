@@ -126,6 +126,13 @@ iframe {
     display: block;
 }
 
+hr {
+    margin: 0;
+    border: none;
+    height: vc(1);
+    background-color: $color-black;
+}
+
 .container {
     position: relative;
     z-index: 1;

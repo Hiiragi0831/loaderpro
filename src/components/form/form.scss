@@ -7,4 +7,17 @@
         font-weight: 400;
         font-size: vc(14);
     }
+
+    &__box-icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        position: absolute;
+        right: vc(30);
+        width: vc(14);
+        height: vc(14);
+    }
 }

@@ -1,17 +1,194 @@
 .header {
+    $p: &;
+
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     z-index: 2100;
-    display: flex;
-    align-items: center;
-    padding: vc(20) 0;
     color: $color-white;
-    //background-color: rgba($color-gray, 0.5);
 
-    &__container {
+    &__box {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+
+        &--two {
+            justify-content: normal;
+            gap: vc(70);
+        }
+    }
+
+    &__head {
+        padding: vc(8) 0;
+        width: 100%;
+        background-color: $color-gray;
+
+        .form__input {
+            border: vc(1) solid $color-gray5;
+            padding: vc(10) vc(30);
+            width: 100%;
+            color: $color-white;
+            background-color: transparent;
+        }
+
+        .form__box-icon {
+            width: vc(435);
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+
+        &-inner {
+            border-bottom: vc(1) solid rgba($color-white, 0.1);
+            padding: vc(30) 0;
+        }
+    }
+
+    .contact-box__item {
+        color: $color-white;
+    }
+
+    &__service {
+        display: flex;
+        gap: vc(50);
+
+        &-item {
+            display: flex;
+            align-items: center;
+            transition: color $transition;
+            gap: vc(12);
+
+            svg {
+                width: vc(22);
+                height: vc(22);
+            }
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: vc(16);
+
+        a {
+            width: vc(24);
+            height: vc(24);
+
+            svg {
+                fill: $color-orange;
+                transition: fill $transition;
+            }
+
+            &:hover {
+                svg {
+                    fill: $color-white;
+                }
+            }
+        }
+    }
+
+    &__footer {
+        padding-top: vc(20);
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: vc(10);
+    }
+
+    &__link {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+
+        a {
+            padding: vc(10) 0;
+            color: $color-white;
+            transition: color $transition;
+        }
+
+        &-dropdown {
+            padding-right: vc(15);
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: vc(6);
+                height: vc(1);
+                background-color: $color-white;
+                transition: background-color $transition;
+            }
+
+            &::before {
+                right: vc(3.5);
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                right: 0;
+                transform: rotate(-45deg);
+            }
+
+            a {
+                padding: vc(10) 0;
+                color: $color-white;
+                transition: color $transition;
+            }
+
+            &:hover {
+                #{$p}__dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &:hover {
+            &::before,
+            &::after {
+                background-color: $color-orange;
+            }
+
+            a {
+                color: $color-orange;
+            }
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        left: 0;
+        top: vc(40);
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        padding: vc(5) vc(15);
+        width: vc(150);
+        background-color: $color-gray;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $transition, visibility $transition;
+
+        #{$p}__link {
+            a {
+                color: $color-white;
+            }
+
+            &:hover {
+                a {
+                    color: $color-orange;
+                }
+            }
+        }
     }
 }

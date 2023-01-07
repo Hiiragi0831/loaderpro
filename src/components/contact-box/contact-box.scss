@@ -1,24 +1,25 @@
 .contact-box {
-    p {
-        margin: 0;
-        padding-left: vc(22);
-        font-weight: 400;
-        font-size: vc(13);
-        line-height: vc(15);
-    }
-
-    a {
-        &:hover {
-            color: $color-orange;
-        }
-    }
-
     &__item {
         position: relative;
         display: flex;
         flex-direction: column;
         color: $color-black;
         gap: vc(10);
+
+        p,
+        .link {
+            margin: 0;
+            padding-left: vc(22);
+            font-weight: 400;
+            font-size: vc(13);
+            line-height: vc(15);
+        }
+
+        a {
+            &:hover {
+                color: $color-orange;
+            }
+        }
     }
 
     &__icon {
@@ -38,7 +39,7 @@
         gap: vc(10);
     }
 
-    &__write {
+    .link {
         padding-left: vc(22);
 
         &:hover {

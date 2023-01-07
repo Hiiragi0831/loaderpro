@@ -5,8 +5,10 @@ import '@styles/main.scss';
 
 import {vhFix} from '@scripts/vendor/vh-fix';
 import lazyLoading from '@scripts/modules/lazyLoading';
-import {slider} from "../components/slider/slider";
+import {slider} from "@components/slider/slider";
+import {tab} from "@components/tabs/tabs";
 
 vhFix();
 lazyLoading.init();
 slider();
+tab();
