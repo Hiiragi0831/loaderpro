@@ -1,5 +1,5 @@
 header.header
-    .header__head
+    .header__head.for-desktop
         .container
             .header__box
                 form.form
@@ -20,17 +20,17 @@ header.header
                     a(href="#").logo
                         +svg('logo')
                         | Спецмашина
-                    .contact-box__item
+                    .contact-box__item.for-desktop
                         a(href="mailto:zakaz@cartrac.ru").contact-box__title
                             +svg('icon-email').contact-box__icon
                             | zakaz@cartrac.ru
                         a(href="mailto:zakaz@cartrac.ru").link Написать нам
-                    .contact-box__item
+                    .contact-box__item.for-desktop
                         a(href="tel:+78003501460").contact-box__title
-                            +svg('icon-pnone').contact-box__icon
+                            +svg("icon-phone").contact-box__icon
                             | +7 (800) 350-14-60
                         p c 10.00 до 22.00
-                    .header__social
+                    .header__social.for-desktop
                         a(href="#")
                             +svg('icon-vk')
                         a(href="#")
@@ -38,11 +38,14 @@ header.header
                         a(href="#")
                             +svg('icon-whatsapp')
                 .header__box
-                    a(href="#").button.button__primary Заказать звонок
-    .header__footer
+                    a(href="#").button.button__primary
+                        span.for-desktop Заказать звонок
+                        +svg("icon-phone").for-devices
+                .header__burger
+                    +svg('burger')
+    .header__footer.for-desktop
         .container
             nav.header__nav
-
                 .header__link.header__link-dropdown
                     a(href="#") О компании
                     .header__dropdown
@@ -66,3 +69,35 @@ header.header
                     a(href="#") Услуги
                 .header__link
                     a(href="#") Контакты
+.header-mobile
+    .header-mobile__box
+        .header-mobile__close
+            +svg('close')
+        .header-mobile__search
+            form.form
+                input.form__input(type="text" placeholder="Поиск товара")
+        nav.header__nav
+            .header__link
+                a(href="#") О компании
+            .header__link
+                a(href="#") Техника
+            .header__link
+                a(href="#") Запчасти
+            .header__link
+                a(href="#") Шины
+            .header__link
+                a(href="#") Тяговые АКБ
+            .header__link
+                a(href="#") Гидроборты
+            .header__link
+                a(href="#") Услуги
+            .header__link
+                a(href="#") Контакты
+        include @components/contact-box/contact-box
+        .header__social
+            a(href="#")
+                +svg('icon-vk')
+            a(href="#")
+                +svg('icon-telegram')
+            a(href="#")
+                +svg('icon-whatsapp')

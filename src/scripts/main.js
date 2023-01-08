@@ -7,8 +7,10 @@ import {vhFix} from '@scripts/vendor/vh-fix';
 import lazyLoading from '@scripts/modules/lazyLoading';
 import {slider} from "@components/slider/slider";
 import {tab} from "@components/tabs/tabs";
+import {header} from "@components/header/header";
 
 vhFix();
 lazyLoading.init();
 slider();
 tab();
+header();

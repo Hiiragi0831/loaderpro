@@ -5,8 +5,9 @@
     left: 0;
     right: 0;
     top: 0;
-    z-index: 2100;
+    z-index: 99;
     color: $color-white;
+    transition: background-color $transition;
 
     &__box {
         display: flex;
@@ -16,13 +17,21 @@
         &--two {
             justify-content: normal;
             gap: vc(70);
+
+            @include devices {
+                margin-right: auto;
+            }
+        }
+
+        @include devices {
+            gap: vc(15);
         }
     }
 
     &__head {
         padding: vc(8) 0;
         width: 100%;
-        background-color: $color-gray;
+        background-color: $color-gray6;
 
         .form__input {
             border: vc(1) solid $color-gray5;
@@ -44,6 +53,12 @@
         &-inner {
             border-bottom: vc(1) solid rgba($color-white, 0.1);
             padding: vc(30) 0;
+
+            @include devices {
+                justify-content: normal;
+                border: none;
+                padding: vc(15) 0;
+            }
         }
     }
 
@@ -94,7 +109,7 @@
     }
 
     &__footer {
-        padding-top: vc(20);
+        padding: vc(20) 0;
     }
 
     &__nav {
@@ -102,6 +117,12 @@
         align-items: center;
         justify-content: space-between;
         gap: vc(10);
+
+        @include devices {
+            flex-direction: column;
+            align-items: baseline;
+            gap: vc(0);
+        }
     }
 
     &__link {
@@ -112,8 +133,13 @@
 
         a {
             padding: vc(10) 0;
+            font-size: vc(19);
             color: $color-white;
             transition: color $transition;
+
+            @include devices {
+                padding: vc(10) 0;
+            }
         }
 
         &-dropdown {
@@ -190,5 +216,82 @@
                 }
             }
         }
+    }
+
+    &__burger {
+        display: none;
+        width: vc(30);
+        height: vc(30);
+
+        @include devices {
+            display: block;
+        }
+    }
+
+    &--black {
+        background-color: $color-gray;
+    }
+
+    @include devices {
+        .logo {
+            font-size: vc(16);
+
+            svg {
+                width: vc(40);
+                height: vc(41);
+            }
+        }
+
+        .button {
+            border-radius: 100%;
+            padding: vc(8);
+        }
+    }
+}
+
+.header-mobile {
+    position: fixed;
+    left: vc(-320);
+    z-index: 1000;
+    overflow: auto;
+    padding: vc(20) vc(50) vc(20) vc(15);
+    width: vc(310);
+    height: 100vh;
+    background-color: $color-gray;
+    transition: left $transition;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: vc(20);
+    }
+
+    &__close {
+        position: absolute;
+        right: vc(15);
+        top: vc(15);
+        display: flex;
+        width: vc(15);
+        height: vc(15);
+
+        svg {
+            width: 100%;
+            fill: $color-white;
+        }
+    }
+
+    .contact-box {
+        display: flex;
+        flex-direction: column;
+        gap: vc(15);
+
+        &__item {
+            color: $color-white;
+        }
+    }
+
+    &.is-active {
+        left: 0;
     }
 }

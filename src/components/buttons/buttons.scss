@@ -31,4 +31,9 @@
             background-color: $color-black;
         }
     }
+
+    svg {
+        width: vc(15);
+        height: vc(15);
+    }
 }
