@@ -31,6 +31,24 @@
     }
 }
 
+.line {
+    position: relative;
+    margin-bottom: vc(50);
+    text-align: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: vc(-20);
+        border-radius: vc(90);
+        width: vc(130);
+        height: vc(5);
+        background-color: $color-orange;
+        transform: translateX(-50%);
+    }
+}
+
 p {
     margin-bottom: vc(20);
     font-weight: 400;

@@ -14,12 +14,61 @@
         .commodity__box
             .commodity__logo
                 p Производитель
-                +lazyImage({
-                    src: `${baseDir}assets/images/brand/jungheinrich.png`,
-                    alt: '',
-                    appear: false,
-                })
+                .commodity__logo-img
+                    +lazyImage({
+                        src: `${baseDir}assets/images/brand/jungheinrich.png`,
+                        alt: '',
+                        appear: false,
+                    })
             a(href="#").button.button__primary Узнать стоимость
+    .commodity__description
+        .tabs
+            .tabs__head
+                .tabs__title.h3.is-active(data-item="1") Характеристики
+                .tabs__title.h3(data-item="2") Описание
+            .tabs__body
+                .tabs__description.is-active(data-item="1")
+                    .commodity__options
+                        .commodity__option
+                            p Категория:
+                            p Опора подвижная хомутовая ОПХ2
+                        .commodity__option
+                            p Категория:
+                            p Опора подвижная хомутовая ОПХ2
+                        .commodity__option
+                            p Категория:
+                            p Опора подвижная хомутовая ОПХ2
+                        .commodity__option
+                            p Категория:
+                            p Опора подвижная хомутовая ОПХ2
+                .tabs__description(data-item="2")
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium deserunt ex harum nisi tenetur. Accusamus, asperiores atque debitis dicta dolore expedita laudantium magnam necessitatibus nemo nesciunt omnis sequi suscipit voluptate!
+.commodity
+    .commodity__gallery
+        +lazyImage({
+            src: `${baseDir}assets/images/product/product-02.png`,
+            alt: '',
+            appear: false,
+        })
+    .commodity__info
+        h1.h2 Дизельный вилочный погрузчик TCM FHD15T3Z
+        .commodity__box
+            .product__statys.product__statys--red Нет в наличии
+            p Артикул: 43534
+        hr
+        .commodity__box.commodity__box--two
+            .commodity__logo
+                p Производитель
+                .commodity__logo-img
+                    +lazyImage({
+                        src: `${baseDir}assets/images/brand/jungheinrich.png`,
+                        alt: '',
+                        appear: false,
+                    })
+            .commodity__price
+                p Стоимость
+                span 8 499 руб.
+            a(href="#").button.button__primary Заказать
     .commodity__description
         .tabs
             .tabs__head
