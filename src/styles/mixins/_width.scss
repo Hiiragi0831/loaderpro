@@ -1,0 +1,15 @@
+$max: 100;
+$offset: 5;
+$unit: "%";
+
+@mixin list-loop($className, $styleName) {
+    $i: 0;
+    @while $i <= $max {
+        #{$className + $i} {
+            #{$styleName}: (#{$i} + $unit);
+        }
+        $i: $i + $offset;
+    }
+}
+
+@include list-loop('.w-', 'width');

@@ -199,7 +199,7 @@
         display: flex;
         flex-direction: column;
         padding: vc(5) vc(15);
-        width: vc(150);
+        width: vc(180);
         background-color: $color-gray;
         opacity: 0;
         visibility: hidden;
@@ -213,6 +213,22 @@
             &:hover {
                 a {
                     color: $color-orange;
+                }
+            }
+        }
+
+        &--large {
+            left: 50%;
+            flex-wrap: wrap;
+            padding: vc(15);
+            width: vc(735);
+            height: vc(350);
+            transform: translateX(-50%);
+            gap: vc(5);
+
+            #{$p}__link {
+                a {
+                    padding: 0;
                 }
             }
         }
