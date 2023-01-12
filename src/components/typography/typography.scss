@@ -101,4 +101,8 @@ ul {
     font-weight: 400;
     font-size: vc(30);
     line-height: vc(25);
+
+    @include devices {
+        font-size: vc(25);
+    }
 }

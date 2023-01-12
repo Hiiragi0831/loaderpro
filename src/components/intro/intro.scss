@@ -41,9 +41,11 @@
 
     .container {
         display: flex;
+        margin-top: vc(250);
         gap: vc(200);
 
         @include devices {
+            margin-top: vc(70);
             flex-direction: column;
             gap: vc(30);
         }
@@ -109,5 +111,9 @@
         .button {
             width: 100%;
         }
+    }
+
+    @include devices {
+        padding-top: vc(90);
     }
 }

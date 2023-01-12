@@ -28,6 +28,7 @@
     }
 
     &__title {
+        margin-bottom: 0;
         color: $color-white;
         transition: color $transition;
     }
