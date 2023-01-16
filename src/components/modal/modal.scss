@@ -1,0 +1,32 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1000;
+    padding: vc(20);
+    width: vc(500);
+    max-width: 100%;
+    color: $color-white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: opacity $transition, visibility $transition;
+
+    &__close {
+        position: absolute;
+        right: vc(5);
+        top: vc(5);
+        width: vc(15);
+        height: vc(15);
+        cursor: pointer;
+
+        svg {
+            fill: $color-orange;
+        }
+    }
+
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

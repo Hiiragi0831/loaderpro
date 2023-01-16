@@ -2,6 +2,7 @@ export const header = () => {
     const headerComponent = document.querySelector('.header');
     const headerMobile = document.querySelector('.header-mobile');
     const bgOverflow = document.querySelector('.bg-overflow');
+    const html = document.getElementsByTagName('html')[0];
 
     function setTopPadding () {
         const w = document.documentElement.scrollTop;
@@ -17,7 +18,7 @@ export const header = () => {
         bgOverflow.classList.remove('is-hidden');
         bgOverflow.classList.add('is-active');
         headerMobile.classList.add('is-active');
-        document.getElementsByTagName('html')[0].classList.add('overflow-hidden');
+        html.classList.add('overflow-hidden');
     }
 
     const menuClose = () => {
@@ -26,7 +27,7 @@ export const header = () => {
 
         setTimeout(()=> {
             bgOverflow.classList.add('is-hidden');
-            document.getElementsByTagName('html')[0].classList.remove('overflow-hidden');
+            html.classList.remove('overflow-hidden');
         }, 150);
     }
 

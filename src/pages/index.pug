@@ -19,11 +19,23 @@ append vars
 
 block content
     .bg-overflow.is-hidden
+    .modal(data-modalid="23")
+        .modal__close
+            +svg("close")
+        .modal__content
+            p 23
+    .modal(data-modalid="1")
+        .modal__close
+            +svg("close")
+        .modal__content
+            p 1
     .site
         include @components/header/header
         main
             include @components/intro/intro
             .container.demo-container
+                a(href="#" data-modal="23").button.button__primary modal 23
+                a(href="#" data-modal="1").button.button__primary modal 1
                 include @components/buttons/buttons
                 include @components/typography/typography
                 .row.row__3.row__device-1.pt-30.pb-30.gap-15
