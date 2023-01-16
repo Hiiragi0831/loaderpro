@@ -32,4 +32,22 @@
             object-fit: cover;
         }
     }
+
+    &__col {
+        height: vc(438 + 30);
+
+        .swiper {
+            &-slide {
+                height: vc(146);
+            }
+        }
+
+        @include devices {
+            height: vc(438 + 60);
+        }
+    }
+
+    @include devices {
+        padding-bottom: vc(60);
+    }
 }

@@ -6,6 +6,11 @@
         padding: vc(16) vc(30);
         font-weight: 400;
         font-size: vc(14);
+
+        &-search {
+            border: vc(1) solid $color-light-grey;
+            width: 100%;
+        }
     }
 
     &__box-icon {
@@ -20,4 +25,5 @@
         width: vc(14);
         height: vc(14);
     }
+
 }
