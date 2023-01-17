@@ -16,6 +16,12 @@
         margin: 0;
     }
 
+    &__lead {
+        font-weight: 400;
+        font-size: vc(24);
+        line-height: vc(39);
+    }
+
     &__bg {
         position: absolute;
         left: 0;
