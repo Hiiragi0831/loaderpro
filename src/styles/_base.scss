@@ -196,4 +196,8 @@ hr {
     &:last-of-type {
         padding: vc(70) 0;
     }
+
+    &--bg-ace {
+        background-color: $color-ace;
+    }
 }
