@@ -1,6 +1,6 @@
 .commodity {
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-template: auto auto / 1fr 1fr;
     grid-template-areas:
         "gallery info"
         "description description";
@@ -56,12 +56,16 @@
     }
 
     &__logo {
+        max-width: 50%;
+
         &-img {
             display: inline-flex;
+            max-height: vc(100);
         }
 
         @include devices {
             width: 100%;
+            max-width: 100%;
         }
     }
 

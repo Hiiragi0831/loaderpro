@@ -201,3 +201,12 @@ hr {
         background-color: $color-ace;
     }
 }
+/* stylelint-disable */
+.no-intro {
+    padding-top: vc(300) !important;
+
+    @include devices {
+        padding-top: vc(100) !important;
+    }
+}
+/* stylelint-enable */
