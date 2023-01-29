@@ -22,6 +22,10 @@
         grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
+    &__3-7 {
+        grid-template: 1fr / 30% 70%;
+    }
+
     &__device {
         @include devices {
             &-1 {

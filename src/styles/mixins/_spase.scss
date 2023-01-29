@@ -5,7 +5,7 @@ $offset: 5;
     $i: 0;
     @while $i <= $max {
         #{$className + $i} {
-            #{$styleName}: vc(#{$i});
+            #{$styleName}: vc(#{$i}) !important;
         }
         $i: $i + $offset;
     }

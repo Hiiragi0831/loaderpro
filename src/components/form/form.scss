@@ -1,5 +1,6 @@
 .form {
     &__input {
+        width: 100%;
         outline: none;
         border: none;
         border-radius: vc(90);
@@ -10,6 +11,10 @@
         &-search {
             border: vc(1) solid $color-light-grey;
             width: 100%;
+        }
+
+        &-border {
+            border: vc(1) solid $color-light-grey;
         }
     }
 
@@ -26,4 +31,12 @@
         height: vc(14);
     }
 
+    &__select {
+        appearance: none;
+        border-radius: vc(90);
+        padding: vc(16) vc(30);
+        width: 100%;
+        font-weight: 400;
+        font-size: vc(14);
+    }
 }
