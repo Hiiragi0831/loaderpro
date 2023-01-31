@@ -1,0 +1,71 @@
+.map-geography {
+    position: relative;
+
+    &__inner {
+        height: vc(550);
+    }
+
+    &__zoom-message {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            text-align: center;
+        }
+
+        &.active {
+            display: flex;
+        }
+    }
+}
+
+.map-balloon {
+    padding: vc(20) vc(35);
+    width: 100%;
+    max-width: vc(360);
+    box-sizing: border-box;
+
+    &__title {
+        font-weight: 500;
+    }
+}
+
+.factoid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: inherit;
+
+    &__title {
+        display: inline-block;
+        margin-bottom: vc(10);
+        box-sizing: inherit;
+    }
+}
+
+.popover {
+    position: absolute;
+    border: none;
+    width: max-content;
+    height: auto;
+    max-width: vc(360);
+    background-color: $color-white;
+    box-sizing: border-box;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: vc(-10);
+        top: 50%;
+        width: vc(16);
+        height: vc(16);
+        background-color: $color-white;
+        transform: rotate(45deg) translate3d(0, -50%, 0);
+    }
+}

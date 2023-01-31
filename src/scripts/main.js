@@ -9,6 +9,7 @@ import {slider} from "@components/slider/slider";
 import {tab} from "@components/tabs/tabs";
 import {header} from "@components/header/header";
 import {modal} from "@components/modal/modal";
+import {initMaps} from '@scripts/modules/map/main';
 
 vhFix();
 lazyLoading();
@@ -16,3 +17,4 @@ slider();
 tab();
 header();
 modal();
+initMaps();

@@ -40,7 +40,23 @@ block content
                 include @components/typography/typography
                 .product__filter
                     p Фильтры
+                .row.row__3.row__device-1
+                    .contact__item
+                        .contact__icon
+                            +svg("pin")
+                        .contact__info
+                            .contact__subtitle Адрес:
+                            .contact__title Санкт-Петербург, Кубинская улица, 80Б
+                    .contact__sklad
+                        .contact__icon
+                            +svg("pin")
+                        .contact__info
+                            .contact__title Санкт-Петербург
+                            a.contact__link.map-control__link#pin-0 Показать на карте
 
+                .row
+                    +map-geography('geography-map.json')
+                script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=34ea04b1-8ce5-4e4d-ad93-84aef74e8748")
                 .form__box-icon
                     +svg("arrow-down").form__icon
                     select.form__select.product__select
