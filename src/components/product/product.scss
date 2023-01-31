@@ -203,4 +203,24 @@
             }
         }
     }
+
+    &__select {
+        appearance: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: vc(1) solid $color-light-grey;
+        border-left: none;
+        border-radius: 0;
+        outline: none;
+        padding: vc(20) vc(30);
+        width: 100%;
+        font-weight: 500;
+        font-size: vc(16);
+    }
+
+    &__filter {
+        padding: vc(17) vc(34);
+        text-align: center;
+        background: $color-light-grey;
+    }
 }

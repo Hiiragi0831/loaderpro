@@ -12,6 +12,9 @@
 @import "demo";
 @import "grid";
 
+@import "@components/form/form";
+@import "@components/tabs/tabs";
+@import "@components/modal/modal";
 @import "@components/logo/logo";
 @import "@components/buttons/buttons";
 @import "@components/typography/typography";
@@ -23,10 +26,7 @@
 @import "@components/sentence/sentence";
 @import "@components/brand/brand";
 @import "@components/request/request";
-@import "@components/form/form";
 @import "@components/slider/slider";
 @import "@components/product/product";
 @import "@components/intro/intro";
 @import "@components/commodity/commodity";
-@import "@components/tabs/tabs";
-@import "@components/modal/modal";
