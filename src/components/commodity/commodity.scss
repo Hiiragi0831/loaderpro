@@ -97,6 +97,7 @@
     }
 
     &__price {
+        align-self: flex-start;
         span {
             font-weight: 500;
             font-size: vc(30);
