@@ -170,6 +170,10 @@ hr {
     &-cover {
         object-fit: cover;
     }
+
+    &-posbottom {
+        object-position: bottom;
+    }
 }
 
 /* stylelint-disable */

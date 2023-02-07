@@ -82,4 +82,48 @@ export const slider = () => {
 
         popular.init();
     }
+
+    if (document.querySelector(".slider__video")) {
+        const video = new Swiper('.slider__video .swiper', {
+            modules: [Pagination],
+            spaceBetween: 7,
+            pagination: {
+                el: '.slider__video .swiper-pagination',
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                },
+
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+
+        video.init();
+    }
+
+    if (document.querySelector(".slider__command")) {
+        const command = new Swiper('.slider__command .swiper', {
+            modules: [Pagination],
+            spaceBetween: 7,
+            pagination: {
+                el: '.slider__command .swiper-pagination',
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                },
+
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+
+        command.init();
+    }
 }
