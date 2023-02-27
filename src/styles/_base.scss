@@ -1,15 +1,16 @@
 :root {
-    --width-base: #{$laptop};
-    --width-current: #{$laptop} * 1px;
+    --width-base: 1920;
+    --width-current: 1920 * 1px;
     --width-multiplier: var(--width-current) / var(--width-base);
     --swiper-pagination-color: #{$color-orange};
     --swiper-theme-color: #{$color-orange};
 
-    @include laptop {
+    @media (max-width: (1440px)) {
+        --width-base: 1600;
         --width-current: 100vw;
     }
 
-    @include devices {
+    @media (max-width: (($desktop - 1) * 1px)) {
         --width-base: #{$mobile};
         --width-current: 100vmin;
     }

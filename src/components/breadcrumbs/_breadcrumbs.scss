@@ -1,0 +1,40 @@
+.breadcrumbs {
+    display: flex;
+
+    &__item {
+        color: $color-orange;
+        transition: color $transition;
+
+        &::before {
+            content: "";
+            display: inline-flex;
+            margin: 0 vc(10);
+            width: vc(9);
+            height: vc(9);
+            background-image: url("@images/icons/arrow-down.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: rotate(-90deg);
+        }
+
+        &:hover {
+            color: $color-black;
+        }
+
+        &:first-child {
+            &::before {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            text-decoration: none;
+            color: $color-black;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
