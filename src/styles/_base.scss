@@ -215,3 +215,13 @@ hr {
     }
 }
 /* stylelint-enable */
+
+.ui-menu {
+    &-item {
+        padding: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+}
