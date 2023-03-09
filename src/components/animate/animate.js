@@ -11,8 +11,8 @@ export const animate = () => {
             trigger: el,
             start: "top 50%",
             invalidateOnRefresh: true,
-            scrub: true,
-            markers: true,
+            // scrub: true,
+            // markers: true,
             once: true,
             onEnter: () => {
                 gsap.to(el, {
