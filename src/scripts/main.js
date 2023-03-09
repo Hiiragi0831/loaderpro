@@ -10,6 +10,7 @@ import {tab} from "@components/tabs/tabs";
 import {header} from "@components/header/header";
 import {modal} from "@components/modal/modal";
 import {initMaps} from '@scripts/modules/map/main';
+import {animate} from '@components/animate/animate';
 import 'fslightbox';
 
 vhFix();
@@ -18,4 +19,8 @@ slider();
 tab();
 header();
 modal();
-initMaps();
+animate();
+
+if (document.querySelector(".map-geography")) {
+    initMaps();
+}
