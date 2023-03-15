@@ -1,10 +1,65 @@
 .commodity
     .commodity__gallery
-        +lazyImage({
-            src: `${baseDir}assets/images/product/product-02.png`,
-            alt: '',
-            appear: false,
-        })
+        //+lazyImage({
+        //    src: `${baseDir}assets/images/product/product-02.png`,
+        //    alt: '',
+        //    appear: false,
+        //})
+        #msGallery
+            .swiper.commodity__swiper
+                .swiper-wrapper
+                    .swiper-slide
+                        +lazyImage({
+                            src: `${baseDir}assets/images/product/product-02.png`,
+                            alt: '',
+                            appear: false,
+                        })
+                    .swiper-slide
+                        +lazyImage({
+                            src: `${baseDir}assets/images/product/product-02.png`,
+                            alt: '',
+                            appear: false,
+                        })
+                    .swiper-slide
+                        +lazyImage({
+                            src: `${baseDir}assets/images/product/product-02.png`,
+                            alt: '',
+                            appear: false,
+                        })
+                    .swiper-slide
+                        +lazyImage({
+                            src: `${baseDir}assets/images/product/product-02.png`,
+                            alt: '',
+                            appear: false,
+                        })
+                .swiper-button-next
+                .swiper-button-prev
+            .swiper.commodity__swiper-thumbs
+                .swiper-wrapper
+                    .swiper-slide
+                        +lazyImage({
+                            src: `${baseDir}assets/images/product/product-02.png`,
+                            alt: '',
+                            appear: false,
+                        })
+                    .swiper-slide
+                        +lazyImage({
+                            src: `${baseDir}assets/images/product/product-02.png`,
+                            alt: '',
+                            appear: false,
+                        })
+                    .swiper-slide
+                        +lazyImage({
+                            src: `${baseDir}assets/images/product/product-02.png`,
+                            alt: '',
+                            appear: false,
+                        })
+                    .swiper-slide
+                        +lazyImage({
+                            src: `${baseDir}assets/images/product/product-02.png`,
+                            alt: '',
+                            appear: false,
+                        })
     .commodity__info
         h1.h2 Дизельный вилочный погрузчик TCM FHD15T3Z
         .commodity__box

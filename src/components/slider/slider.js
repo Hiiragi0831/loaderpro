@@ -1,4 +1,4 @@
-import Swiper, { Pagination, Grid } from 'swiper';
+import Swiper, { Pagination, Grid, Navigation, Thumbs } from 'swiper';
 import 'swiper/swiper-bundle.css';
 
 export const slider = () => {
@@ -125,5 +125,28 @@ export const slider = () => {
         });
 
         command.init();
+    }
+
+    if (document.querySelector(".commodity__swiper")) {
+        const commoditySwiperThumbs = new Swiper(".commodity__swiper-thumbs", {
+            spaceBetween: 1,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        const commoditySwiper = new Swiper(".commodity__swiper", {
+            modules: [Navigation, Thumbs],
+            spaceBetween: 1,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: commoditySwiperThumbs,
+            },
+        });
+
+        commoditySwiper.init();
     }
 }

@@ -1,10 +1,9 @@
 .commodity {
-    display: grid;
-    grid-template: auto auto / 1fr 1fr;
-    grid-template-areas:
-        "gallery info"
-        "description description";
-    gap: vc(50) vc(100);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: vc(50);
+    width: 100%;
 
     &__box {
         display: flex;
@@ -33,25 +32,67 @@
 
     &__gallery {
         position: relative;
+        flex: 0 0 auto;
         grid-area: gallery;
-        width: 100%;
+        margin-right: vc(25);
+        width: vc(600 - 25);
         height: 100%;
         max-height: vc(400);
 
-        .ms2Gallery,
-        .fotorama {
-            width: vc(540);
+        #msGallery {
+            position: relative;
+            width: 100%;
             height: vc(400);
+            max-width: 100%;
+        }
+
+        .swiper-container,
+        .swiper-slide {
+            display: inherit;
+        }
+
+        .swiper-slide {
+            max-width: 100% !important;
+        }
+
+        @include devices {
+            margin: 0;
+            width: 100%;
+        }
+    }
+
+    &__swiper {
+        width: 100%;
+        height: vc(300);
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-thumbs {
+            width: 100%;
+            height: vc(100);
+
+            .swiper-slide {
+                img {
+                    object-fit: contain;
+                }
+            }
         }
     }
 
     &__info {
         display: flex;
+        flex: 0 0 auto;
         flex-direction: column;
         justify-content: center;
         grid-area: info;
+        margin-left: vc(25);
         border-radius: vc(10);
         padding: vc(30);
+        width: vc(600 - 25);
         background-color: $color-ace;
         gap: vc(20);
 
@@ -61,6 +102,11 @@
             @include devices {
                 width: 100%;
             }
+        }
+
+        @include devices {
+            margin: 0;
+            width: 100%;
         }
     }
 
@@ -79,7 +125,8 @@
     }
 
     &__description {
-        grid-area: description;
+        flex: 0 0 100%;
+        width: 100%;
     }
 
     &__options {
@@ -107,6 +154,7 @@
 
     &__price {
         align-self: flex-start;
+
         span {
             font-weight: 500;
             font-size: vc(30);
@@ -117,7 +165,6 @@
     }
 
     @include devices {
-        grid-template: 1fr / 1fr;
-        grid-template-areas:"gallery" "info" "description";
+        flex-direction: column;
     }
 }
