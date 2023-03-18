@@ -138,7 +138,8 @@
             transition: color $transition;
 
             @include devices {
-                padding: vc(10) 0;
+                padding: vc(8) 0;
+                font-size: vc(16);
             }
         }
 
