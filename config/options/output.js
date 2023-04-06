@@ -34,6 +34,6 @@ export const output = {
         // поддерживает необязательную цепочку ('obj?.a' или 'obj?.()').
         optionalChaining: true,
         // поддерживает шаблонные литералы. `The sum of ${x}`
-        templateLiteral: true
-    }
+        templateLiteral: true,
+    },
 };

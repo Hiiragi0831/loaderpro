@@ -55,7 +55,6 @@ Thumbs.db
 .vscode/
 aero-deploy.tar.gz
 *-lock.json
-yarn.lock
 
 # Editors config
 .settings

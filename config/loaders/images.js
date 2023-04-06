@@ -8,10 +8,9 @@
 
 export const images = {
     test: /\.(png|jpg|jpeg|gif|ico|webp|avif|svg)$/i,
-    // type: 'asset', // Webpack 5.x: loads file into output folter (file-loader)
     type: 'asset/resource',
     generator: {
-        filename: 'assets/images/[name][ext]'
+        filename: 'assets/images/[name][ext]',
     },
     // use: [
     //     {

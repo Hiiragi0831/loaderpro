@@ -11,12 +11,9 @@ trim_trailing_whitespace = true
 indent_size = 4
 indent_style = space
 max_line_length = 120
+quote_type = single
 
 [*.txt, .*]
 indent_size = 4
 indent_style = space
 max_line_length = 120
-
-[*.html]
-indent_size = 2
-max_line_length = 255

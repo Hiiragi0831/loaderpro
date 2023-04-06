@@ -9,7 +9,7 @@ import path from 'path';
 const thePath = (folder = '') => path.resolve(__dirname, folder);
 
 export const WebpackBuildNotifier = new WebpackBuildNotifierPlugin({
-    title: "Ninelines project",
+    title: 'Project',
     suppressSuccess: 'always', // не спамить успешными уведомлениями
     suppressWarning: true,
     sound: false,
@@ -17,5 +17,5 @@ export const WebpackBuildNotifier = new WebpackBuildNotifierPlugin({
     // Errors/warnings формат. Пример: “3 errors – resources/sass/oh-no.scss”
     messageFormatter: (error, filepath, status, errorCount) => {
         return `${errorCount} ${status}${errorCount === 1 ? '' : 's'} – ${filepath.replace(thePath() + '/', '')}`;
-    }
-})
+    },
+});

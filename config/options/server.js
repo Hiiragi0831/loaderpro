@@ -1,5 +1,5 @@
-import { paths } from "../store";
-import { config } from "../../config";
+import { paths } from '../store';
+import { config } from '../../config';
 
 /**
  * dev-сервер для быстрой разработки

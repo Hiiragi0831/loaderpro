@@ -17,7 +17,7 @@ const mediaPattern = (from) => ({
 
         config.images.components.paths.map((item) => {
             if (absoluteFilename.indexOf(item) > -1) {
-                pathTo = absoluteFilename.replace(`/${item}`, '');
+                pathTo = absoluteFilename.replace(`${process.platform === 'win32' ? '\\' : '/'}${item}`, '');
             }
         });
 
@@ -51,6 +51,6 @@ export const Copy = new CopyPlugin({
             from: paths.src.svgSprites,
             to: paths.build.svgSprites,
             noErrorOnMissing: true,
-        }
+        },
     ],
 });

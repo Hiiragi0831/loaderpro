@@ -8,8 +8,8 @@
 export const scripts = {
     test: /\.(js|ts)$/,
     exclude: /node_modules/,
-    use: ['babel-loader'],
+    use: 'babel-loader',
     generator: {
-        filename: 'assets/javascript/[name][ext]'
+        filename: 'assets/javascript/[name][ext]',
     },
 };

@@ -1,0 +1,106 @@
+.field-num {
+  $block-name: &; // #{$block-name}__element
+
+  display: block;
+  margin-bottom: vc(15);
+
+  &__name {
+  }
+
+  &__input-wrap {
+    display: block;
+  }
+
+  &__input-and-btns {
+    display: block;
+    position: relative;
+    width: vc(155);
+
+    @include mobile {
+      width: vc(100);
+    }
+  }
+
+  &__input {
+    width: vc(155);
+    height: vc(50);
+    margin: 0;
+    padding: 0 vc(40);
+    text-align: center;
+    appearance: none;
+    border: 1px solid #d0d0d0;
+    border-radius: $border-radius;
+
+    @include mobile {
+      width: vc(100);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    width: vc(40);
+    border: none;
+    padding: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    font: 0/0 a; // stylelint-disable-line
+    color: transparent;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      // background-color: $gray-lightest;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--plus {
+      right: 1px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 357 357'%3E%3Cpath d='M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z'/%3E%3C/svg%3E")
+        center no-repeat;
+        background-size: vc(14) vc(14);
+    }
+
+    &--minus {
+      left: 1px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 357 357'%3E%3Cpath d='M357 204H0v-51h357v51z'/%3E%3C/svg%3E")
+        center no-repeat;
+      background-size: vc(14) vc(14);
+    }
+
+    #{$block-name}--disabled & {
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    @include mobile {
+      width: vc(30);
+    }
+  }
+
+  &__help-text {
+    // @include field-help-text;
+  }
+
+  &--error {
+    #{$block-name}__name,
+    #{$block-name}__input,
+    #{$block-name}__help-text {
+      color: $color-red;
+    }
+
+    #{$block-name}__input {
+      border-color: $color-red;
+      background-color: lighten($color-red, 35%);
+    }
+  }
+}

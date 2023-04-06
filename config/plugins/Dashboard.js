@@ -1,4 +1,4 @@
-import DashboardPlugin from "webpack-dashboard/plugin";
+import DashboardPlugin from 'webpack-dashboard/plugin';
 
 /**
  * Добавляет

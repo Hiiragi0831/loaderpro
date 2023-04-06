@@ -7,20 +7,23 @@ export default {
     optimization: {
         ...optimization,
         minimize: true,
-        chunkIds: "size",
-        moduleIds: "size",
-        mangleExports: "size",
+        chunkIds: 'size',
+        moduleIds: 'size',
+        mangleExports: 'size',
         nodeEnv: 'production',
-        minimizer: [new TerserJSPlugin({
-            terserOptions: {
-                compress: true,
-                toplevel: true,
-                output: {
-                    comments: false,
+        minimizer: [
+            new TerserJSPlugin({
+                exclude: [/\.min\.(js|ts)$/],
+                terserOptions: {
+                    compress: true,
+                    toplevel: true,
+                    output: {
+                        comments: false,
+                    },
                 },
-            },
-            extractComments: false,
-        })],
+                extractComments: false,
+            }),
+        ],
     },
     plugins: [Clean],
     performance: {

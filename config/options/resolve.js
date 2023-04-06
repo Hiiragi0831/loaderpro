@@ -7,7 +7,8 @@ import { paths } from '../store';
  */
 
 export const resolve = {
-    alias: { // пути к папкам для быстрого доступа импортов
+    alias: {
+        // пути к папкам для быстрого доступа импортов
         '@': paths.src.base,
         '@pug': paths.src.pug,
         '@data': paths.src.data,

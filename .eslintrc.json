@@ -10,6 +10,9 @@
     },
     "extends": "eslint:recommended",
     "globals": {
+        "require": "readonly",
+        "process": "readonly",
+        "__dirname": "readonly",
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
         "_": "readonly",

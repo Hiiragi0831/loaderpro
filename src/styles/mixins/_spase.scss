@@ -27,3 +27,22 @@ $offset: 5;
 @include list-loop('.gap-', 'gap');
 @include list-loop('.gap-r-', 'row-gap');
 @include list-loop('.gap-c-', 'column-gap');
+
+@include desktop {
+    // Margins
+    @include list-loop('.mt-md-', 'margin-top');
+    @include list-loop('.mr-md-', 'margin-right');
+    @include list-loop('.mb-md-', 'margin-bottom');
+    @include list-loop('.ml-md-', 'margin-left');
+    @include list-loop('.mx-md-', 'margin');
+    // Paddings
+    @include list-loop('.pt-md-', 'padding-top');
+    @include list-loop('.pr-md-', 'padding-right');
+    @include list-loop('.pb-md-', 'padding-bottom');
+    @include list-loop('.pl-md-', 'padding-left');
+    @include list-loop('.px-md-', 'padding');
+    //gap
+    @include list-loop('.gap-md-', 'gap');
+    @include list-loop('.gap-r-md-', 'row-gap');
+    @include list-loop('.gap-c-md-', 'column-gap');
+}

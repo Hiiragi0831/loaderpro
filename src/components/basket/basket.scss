@@ -1,0 +1,27 @@
+.basket {
+    &__title {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        a {
+            color: $color-black;
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+    }
+
+    &__title,
+    &__count,
+    &__weight,
+    &__price,
+    &__cost,
+    &__remove {
+        vertical-align: middle;
+        text-align: center;
+    }
+}

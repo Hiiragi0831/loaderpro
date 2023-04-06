@@ -1,7 +1,4 @@
-import {
-    isDev,
-    paths,
-} from '../store';
+import { isDev, paths } from '../store';
 import { config } from '../../config';
 
 /**
@@ -14,28 +11,8 @@ import { config } from '../../config';
 export const pug = {
     test: /\.pug$/,
     use: [
-        // { нужно в случае использование pug-loader с методом html
-        //     loader: 'html-loader',
-        //     options: {
-        //       esModule: true, // разрешить использовать require() для загрузки шаблона в JavaScript
-        //       sources: {
-        //         // Static resource URL from public web path should not be parsed.
-        //         // Leave as is:
-        //         //   img(src='/assets/image.jpg')
-        //         //   link(rel='stylesheet' href='assets/styles.css')
-        //         // Must be processed:
-        //         //   img(src=require('./image.jpg'))
-        //         //   link(rel='stylesheet' href=require('./styles.css'))
-        //         urlFilter: (attribute, value) => {
-        //             if (path.isAbsolute(value) && fs.existsSync(value)) {
-        //                 return path.isAbsolute(value) && fs.existsSync(value);
-        //             }
-        //         },
-        //       }
-        //     },
-        // },
         {
-            loader: "@webdiscus/pug-loader",
+            loader: '@webdiscus/pug-loader',
             options: {
                 compileDebug: true,
                 esModule: true,
@@ -43,9 +20,9 @@ export const pug = {
                 data: {
                     isDev: isDev(),
                     prefix: config.html.publicPath,
-                    publicPath: config.html.isProd() ? config.html.publicPath : config.html.publicPathDev
-                }
+                    publicPath: config.html.isProd() ? config.html.publicPath : config.html.publicPathDev,
+                },
             },
-        }
-    ]
+        },
+    ],
 };

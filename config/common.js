@@ -2,7 +2,7 @@ import { entry, output, optimizationSingle, optimizationMultiple, resolve } from
 import * as plugins from './plugins';
 import * as loaders from './loaders';
 import { paths } from './store.js';
-import {config} from '../config.js';
+import { config } from '../config.js';
 
 const optimization = config.javascript.multipleFiles ? optimizationMultiple : optimizationSingle;
 
@@ -25,25 +25,19 @@ export default {
         // Allow to use await on module evaluation (Proposal)
     },
     module: {
-        rules: [
-            loaders.scripts,
-            loaders.html,
-            loaders.pug,
-            loaders.styles,
-            loaders.images,
-            loaders.fonts,
-        ],
+        rules: [loaders.scripts, loaders.html, loaders.pug, loaders.styles, loaders.images, loaders.fonts],
     },
     plugins: [
         plugins.SVGSpritemap,
-        plugins.Provide,
         plugins.MiniCssExtract,
         plugins.Copy,
         // plugins.ESLint,
         plugins.Interpolate,
         plugins.WebpackBuildNotifier,
         plugins.Dashboard,
-        ...new plugins.HtmlPages(),
+        ...plugins.HtmlPages(),
+        plugins.RemoveFiles,
+        plugins.Define,
     ],
     optimization,
     resolve,
@@ -51,5 +45,8 @@ export default {
         alias: {
             'pug-loader': '@webdiscus/pug-loader',
         },
+    },
+    stats: {
+        children: true,
     },
 };

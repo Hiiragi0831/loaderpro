@@ -6,7 +6,7 @@
 
 export const html = {
     test: /\.html$/i,
-    loader: "html-loader",
+    loader: 'html-loader',
     options: {
         sources: true,
         esModule: true,

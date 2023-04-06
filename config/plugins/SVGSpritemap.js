@@ -9,19 +9,19 @@ import { paths } from '../store';
  * @see https://github.com/cascornelissen/svg-spritemap-webpack-plugin
  */
 
-export const SVGSpritemap =
-    new SVGSpritemapPlugin(`${paths.src.svgSprites}/**/*.svg`, {
-        styles: `${paths.src.styles}/_sprites.scss`,
-        output: {
-            // filename: 'assets/images/symbol.[contenthash].svg',
-            // svgo: {
-            //     plugins: [
-            //         { removeTitle: true },
-            //         { removeStyleElement: true },
-            //     ],
-            // },
-        },
-        sprite: {
-            prefix: 'icon-',
-        },
-    });
+export const SVGSpritemap = new SVGSpritemapPlugin(`src/assets/svg-sprites/**/*.svg`, {
+    // FIX IT!!! styles: `${paths.src.styles}/_sprites.scss`,
+    styles: `src/styles/_sprites.scss`,
+    output: {
+        // filename: 'assets/images/symbol.[contenthash].svg',
+        // svgo: {
+        //     plugins: [
+        //         { removeTitle: true },
+        //         { removeStyleElement: true },
+        //     ],
+        // },
+    },
+    sprite: {
+        prefix: 'icon-',
+    },
+});

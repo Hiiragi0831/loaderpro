@@ -12,13 +12,8 @@ import { isDev } from '../store';
 
 export const styles = {
     test: /\.(sa|sc|c)ss$/,
-    use: [
-        isDev() ? 'style-loader' : MiniCssExtractPlugin.loader,
-        'css-loader',
-        'postcss-loader',
-        'sass-loader',
-    ],
+    use: [isDev() ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
     generator: {
-        filename: 'assets/styles/[name][ext]'
+        filename: 'assets/styles/[name][ext]',
     },
 };

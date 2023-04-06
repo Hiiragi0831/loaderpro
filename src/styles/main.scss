@@ -2,8 +2,8 @@
 // не трогать этот импорт, он нужен для работы svg-спрайтов
 @import './sprites';
 
-@import "functions";
 @import "variables";
+@import "functions";
 @import "mixins";
 @import "fonts";
 @import "base";
@@ -33,3 +33,5 @@
 @import "@components/product/product";
 @import "@components/intro/intro";
 @import "@components/commodity/commodity";
+@import "@components/basket/basket";
+@import "@components/field-num/field-num";

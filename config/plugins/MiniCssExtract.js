@@ -1,4 +1,4 @@
-import {isDev} from '../store';
+import { isDev } from '../store';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 /**

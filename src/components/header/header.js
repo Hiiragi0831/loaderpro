@@ -31,6 +31,11 @@ export const header = () => {
         }, 150);
     }
 
+    if (headerComponent.querySelector('[data-large]')) {
+        const large = headerComponent.querySelector('[data-large]').parentNode;
+        large.querySelector('.header__dropdown').classList.add('header__dropdown--large')
+    }
+
     if (headerComponent && !headerComponent.classList.contains('header--black')) {
         setTopPadding();
 

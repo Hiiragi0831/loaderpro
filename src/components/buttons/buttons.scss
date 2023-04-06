@@ -10,6 +10,12 @@
     font-size: vc(15);
     line-height: vc(18);
     text-align: center;
+    transition: background-color $transition, color $transition;
+
+    svg {
+        width: vc(15);
+        height: vc(15);
+    }
 
     &__primary {
         color: $color-white;
@@ -32,8 +38,13 @@
         }
     }
 
-    svg {
-        width: vc(15);
-        height: vc(15);
+    &__check {
+        position: absolute;
+        clip: rect(0,0,0,0);
+        pointer-events: none;
+
+        &:checked + .button__primary {
+            background-color: $color-black;
+        }
     }
 }
