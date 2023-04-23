@@ -1,4 +1,6 @@
 .button {
+    $p: &;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +19,11 @@
         height: vc(15);
     }
 
+    &__anime {
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
+
     &__primary {
         color: $color-white;
         background-color: $color-orange;
@@ -31,10 +38,18 @@
                 color: $color-white;
                 background-color: $color-black;
             }
+
+            &#{$p}__anime {
+                animation-name: animePrimary;
+            }
         }
 
         &:hover {
             background-color: $color-black;
+        }
+
+        &#{$p}__anime {
+            animation-name: animePrimary;
         }
     }
 
@@ -46,5 +61,18 @@
         &:checked + .button__primary {
             background-color: $color-black;
         }
+    }
+}
+
+@keyframes animePrimary {
+    20%, 100% {
+        box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0);
+    }
+
+    0% {
+        box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0);
+    }
+    10% {
+        box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0.4);
     }
 }
