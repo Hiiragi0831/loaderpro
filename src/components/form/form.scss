@@ -40,6 +40,10 @@
         font-size: vc(14);
     }
 
+    &__group {
+        display: flex;
+    }
+
     &__floating {
         position: relative;
 

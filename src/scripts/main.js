@@ -11,6 +11,8 @@ import {header} from "@components/header/header";
 import {modal} from "@components/modal/modal";
 import {initMaps} from '@scripts/modules/map/main';
 import {animate} from '@components/animate/animate';
+import {initQty} from '@components/field-num/field-num';
+
 import 'fslightbox';
 
 vhFix();
@@ -20,7 +22,8 @@ tab();
 header();
 modal();
 animate();
+initQty();
 
 if (document.querySelector(".map-geography")) {
-    initMaps();
+    // initMaps();
 }

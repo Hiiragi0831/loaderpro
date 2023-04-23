@@ -164,6 +164,26 @@
         }
     }
 
+    &__payer {
+        margin: vc(15) 0;
+
+        p {
+            margin: 0;
+        }
+
+        img {
+            max-width: vc(160);
+        }
+
+        .small {
+            margin-top: vc(15);
+            opacity: 0.5;
+            font-size: vc(12);
+            font-weight: 400;
+            line-height: vc(14);
+        }
+    }
+
     @include devices {
         flex-direction: column;
     }

@@ -1,0 +1,10 @@
+.totals {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include devices {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,24 @@
+.table {
+    width: 100%;
+    border-color: $color-gray;
+    border-collapse:collapse;
+    caption-side: bottom;
+
+    tbody, td, tfoot, th, thead, tr {
+        border: 0 solid;
+        border-color: inherit;
+    }
+
+    &__scroll {
+        overflow-x: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    >:not(caption)>*>* {
+        background-color: transparent;
+        border-bottom-width: 1px;
+        box-shadow: inset 0 0 0 vc(9999) transparent;
+        padding: vc(10);
+    }
+}

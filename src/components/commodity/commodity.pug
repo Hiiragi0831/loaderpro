@@ -120,9 +120,19 @@
                         alt: '',
                         appear: false,
                     })
+                p.mt-15 *Указана цена последней продажи и может меняться от колебаний курса валют
             .commodity__price
                 p Стоимость
                 span 8 499 руб.
+                .commodity__payer
+                    p Способы оплаты
+                    +lazyImage({
+                        src: `${baseDir}assets/images/pay.png`,
+                        alt: '',
+                        appear: false,
+                    })
+                    p.small Оплата картой и безнал с ндс 20%
+
             a(href="#").button.button__primary Заказать
     .commodity__description
         .tabs

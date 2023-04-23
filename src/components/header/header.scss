@@ -222,10 +222,11 @@
             left: 50%;
             flex-wrap: wrap;
             padding: vc(15);
-            width: vc(800);
+            width: vc(815);
             height: vc(375);
             transform: translateX(-50%);
-            gap: vc(5);
+            column-gap: vc(10);
+            row-gap: vc(5);
 
             #{$p}__link {
                 a {
