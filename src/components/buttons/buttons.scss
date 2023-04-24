@@ -20,7 +20,7 @@
     }
 
     &__anime {
-        animation-duration: 4.5s;
+        animation-duration: 1.5s;
         animation-iteration-count: infinite;
     }
 
@@ -65,14 +65,15 @@
 }
 
 @keyframes animePrimary {
-    20%, 100% {
-        box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0);
-    }
-
     0% {
         box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0);
     }
-    10% {
+
+    50% {
         box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0);
     }
 }
