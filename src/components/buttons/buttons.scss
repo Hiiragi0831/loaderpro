@@ -28,6 +28,10 @@
         color: $color-white;
         background-color: $color-orange;
 
+        svg {
+            fill: $color-white;
+        }
+
         &-outline {
             border: 1px solid $color-orange;
             color: $color-orange;
@@ -37,6 +41,10 @@
                 border: 1px solid $color-black;
                 color: $color-white;
                 background-color: $color-black;
+            }
+
+            svg {
+                fill: $color-orange;
             }
 
             &#{$p}__anime {
