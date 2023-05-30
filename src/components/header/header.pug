@@ -5,7 +5,8 @@ header.header
                 form.form
                     .form__box-icon
                         input.form__input(type="text" placeholder="Поиск по сайту")
-                        +svg("search").form__icon
+                        button(type="submit").form__icon
+                            +svg("search")
                 .header__service
                     a(href="#").header__service-item
                         +svg("user")
