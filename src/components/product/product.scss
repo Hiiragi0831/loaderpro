@@ -97,8 +97,8 @@
         left: vc(20);
         top: vc(20);
         display: flex;
-        justify-content: center;
-        width: vc(77);
+
+        width: vc(125);
 
         #{$p}__statys {
             &::before {
@@ -126,6 +126,7 @@
             position: relative;
             left: auto;
             top: auto;
+            justify-content: center;
 
             #{$p}__statys {
                 span {

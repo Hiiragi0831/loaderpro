@@ -20,13 +20,17 @@
     }
 
     &__anime {
-        animation-duration: 6s;
+        animation-duration: 1.5s;
         animation-iteration-count: infinite;
     }
 
     &__primary {
         color: $color-white;
         background-color: $color-orange;
+
+        svg {
+            fill: $color-white;
+        }
 
         &-outline {
             border: 1px solid $color-orange;
@@ -37,6 +41,10 @@
                 border: 1px solid $color-black;
                 color: $color-white;
                 background-color: $color-black;
+            }
+
+            svg {
+                fill: $color-orange;
             }
 
             &#{$p}__anime {
@@ -65,14 +73,15 @@
 }
 
 @keyframes animePrimary {
-    20%, 100% {
-        box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0);
-    }
-
     0% {
         box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0);
     }
-    10% {
+
+    50% {
         box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 vc(5) vc(50) vc(20) rgba($color-orange, 0);
     }
 }
