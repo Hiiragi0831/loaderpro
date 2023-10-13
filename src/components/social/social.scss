@@ -56,4 +56,10 @@
             margin-bottom: vc(20);
         }
     }
+
+    .button {
+        @include devices {
+            margin: auto;
+        }
+    }
 }

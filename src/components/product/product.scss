@@ -97,7 +97,6 @@
         left: vc(20);
         top: vc(20);
         display: flex;
-
         width: vc(125);
 
         #{$p}__statys {
@@ -207,12 +206,12 @@
 
     &__select {
         appearance: none;
+        outline: none;
         border-top: none;
         border-right: none;
         border-bottom: vc(1) solid $color-light-grey;
         border-left: none;
         border-radius: 0;
-        outline: none;
         padding: vc(20) vc(30);
         width: 100%;
         font-weight: 500;
