@@ -37,12 +37,6 @@
             color: $color-orange;
             background-color: transparent;
 
-            &:hover {
-                border: 1px solid $color-black;
-                color: $color-white;
-                background-color: $color-black;
-            }
-
             svg {
                 fill: $color-orange;
             }
@@ -50,24 +44,31 @@
             &#{$p}__anime {
                 animation-name: animePrimary;
             }
-        }
 
-        &:hover {
-            background-color: $color-black;
+            &:hover {
+                border: 1px solid $color-black;
+                color: $color-white;
+                background-color: $color-black;
+            }
         }
 
         &#{$p}__anime {
             animation-name: animePrimary;
         }
+
+        &:hover {
+            background-color: $color-black;
+        }
     }
 
     &__check {
         position: absolute;
-        clip: rect(0,0,0,0);
         pointer-events: none;
+        clip: rect(0, 0, 0, 0);
 
-        &:checked + .button__primary {
-            background-color: $color-black;
+        &:checked + .button__primary-outline {
+            color: $color-white;
+            background-color: $color-orange;
         }
     }
 }

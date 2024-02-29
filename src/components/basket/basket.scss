@@ -5,20 +5,20 @@
         .image {
             display: flex;
             flex-shrink: 0;
-            max-height: vc(130);
             max-width: vc(130);
+            max-height: vc(130);
 
             @include devices {
-                max-height: vc(75);
                 max-width: vc(75);
+                max-height: vc(75);
             }
         }
 
         &-title {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: start;
+            justify-content: center;
             margin: 0;
             min-width: vc(130);
         }
@@ -38,6 +38,11 @@
         }
     }
 
+    &__box {
+        display: flex;
+        gap: vc(15);
+    }
+
     &__title,
     &__count,
     &__weight,
@@ -48,14 +53,8 @@
         text-align: center;
     }
 
-
     &__price,
     &__count {
         white-space: nowrap;
-    }
-
-    &__box {
-        display: flex;
-        gap: vc(15);
     }
 }
