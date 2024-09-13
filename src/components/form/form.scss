@@ -18,6 +18,17 @@
         }
     }
 
+    &__textarea {
+        outline: none;
+        border: none;
+        border-radius: vc(30);
+        padding: vc(16) vc(30);
+        width: 100%;
+        font-weight: 400;
+        font-size: vc(14);
+        resize: none;
+    }
+
     &__box-icon {
         position: relative;
         display: flex;

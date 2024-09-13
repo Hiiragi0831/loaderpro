@@ -6,16 +6,18 @@
     padding: vc(20);
     width: vc(500);
     max-width: 100%;
-    color: $color-white;
+    color: $color-black;
     opacity: 0;
+    background: $color-white;
+    border-radius: vc(20);
     visibility: hidden;
     transform: translate(-50%, -50%);
     transition: opacity $transition, visibility $transition;
 
     &__close {
         position: absolute;
-        right: vc(5);
-        top: vc(5);
+        right: vc(15);
+        top: vc(15);
         width: vc(15);
         height: vc(15);
         cursor: pointer;
@@ -28,5 +30,27 @@
     &.is-active {
         opacity: 1;
         visibility: visible;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: vc(15);
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: vc(15);
+
+        &__input,
+        &__textarea {
+            border: 1px solid;
+            width: 100%;
+        }
+
+        .button {
+            width: 100%;
+        }
     }
 }
